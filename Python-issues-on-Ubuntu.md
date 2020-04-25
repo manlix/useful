@@ -16,8 +16,24 @@ package, recreate your virtual environment.
 Failing command: ['/home/manlix/venv/test/bin/python3', '-Im', 'ensurepip', '--upgrade', '--default-pip']
 ```
 
-**Solution**: install related package **python3-venv** providing module **venv**
+**Solution**: install package **python3-venv** providing module **venv**
 
 ```
 manlix@lab:~/venv$ sudo apt install -y python3-venv
+```
+
+**Problem**: cannot run setup.py
+
+```
+manlix@lab:~/git/project$ python3 setup.py 
+Traceback (most recent call last):
+  File "setup.py", line 3, in <module>
+    import setuptools
+ModuleNotFoundError: No module named 'setuptools'
+```
+
+**Solution**: install package **python3-setuptools**
+
+```
+manlix@lab:~$ sudo apt install python3-setuptool
 ```
