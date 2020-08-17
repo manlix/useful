@@ -57,7 +57,7 @@ db.inventory.find( { item: { $exists: true } } )
 db.inventory.find( { item: { $exists: false } } )
 ```
 
-### Select documents with field 'item' = "hello"
+### Select documents where field 'item' = "hello"
 
 ```
 db.inventory.find( { item: "hello" } )
