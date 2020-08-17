@@ -62,3 +62,9 @@ db.inventory.find( { item: { $exists: false } } )
 ```
 db.inventory.find( { item: "hello" } )
 ```
+
+### Select documents where field 'status' = "D" and field 'qty' = 0
+
+```
+db.inventory.find( { status: "D", qty: 0 } )
+```
