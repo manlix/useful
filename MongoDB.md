@@ -58,13 +58,16 @@ db.inventory.find( { item: { $exists: false } } )
 ```
 
 ### Select documents where field 'item' = "hello"
-
 ```
 db.inventory.find( { item: "hello" } )
 ```
 
 ### Select documents where field 'status' = "D" and field 'qty' = 0
-
 ```
 db.inventory.find( { status: "D", qty: 0 } )
+```
+
+### Select documents where the 'uom' field is nested inside the 'size' document and equals "in"
+```
+db.inventory.find( { "size.uom": "in" } )
 ```
