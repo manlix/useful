@@ -36,6 +36,17 @@ db["COLLECTION.NAME"].drop()
 
 ## [Documents]
 
+### Select all documents
+```
+db.inventory.find( {} )
+```
+
+### Select all documents in pretty format
+```
+db.inventory.find( {} ).pretty()
+```
+
+
 ### Select documents with existing field 'item'
 ```
 db.inventory.find( { item: { $exists: true } } )
