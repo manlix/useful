@@ -71,3 +71,8 @@ db.inventory.find( { status: "D", qty: 0 } )
 ```
 db.inventory.find( { "size.uom": "in" } )
 ```
+
+### Select documents where tags array contains "red" as one of its elements
+```
+db.inventory.find( { tags: "red" } )
+```
