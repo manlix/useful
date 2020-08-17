@@ -47,32 +47,37 @@ db.inventory.find( {} ).pretty()
 ```
 
 
-### Select documents with existing field 'item'
+### Documents with existing field 'item'
 ```
 db.inventory.find( { item: { $exists: true } } )
 ```
 
-### Select documents with non-existing field 'item'
+### Documents with non-existing field 'item'
 ```
 db.inventory.find( { item: { $exists: false } } )
 ```
 
-### Select documents where field 'item' = "hello"
+### Documents where field 'item' = "hello"
 ```
 db.inventory.find( { item: "hello" } )
 ```
 
-### Select documents where field 'status' = "D" and field 'qty' = 0
+### Documents where field 'status' = "D" and field 'qty' = 0
 ```
 db.inventory.find( { status: "D", qty: 0 } )
 ```
 
-### Select documents where the 'uom' field is nested inside the 'size' document and equals "in"
+### Documents where the 'uom' field is nested inside the 'size' document and equals "in"
 ```
 db.inventory.find( { "size.uom": "in" } )
 ```
 
-### Select documents where tags array contains "red" as one of its elements
+### Documents where the tags array contains "red" as one of its elements
 ```
 db.inventory.find( { tags: "red" } )
+```
+
+### Documents where the tags field matches the specified array exactly, including the order
+```
+db.inventory.find( { tags: [ "red", "blank" ] } )
 ```
