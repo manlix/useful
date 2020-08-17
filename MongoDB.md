@@ -55,5 +55,10 @@ db.inventory.find( { item: { $exists: true } } )
 ### Select documents with non-existing field 'item'
 ```
 db.inventory.find( { item: { $exists: false } } )
+```
 
+### Select documents with field 'item' = "hello"
+
+```
+db.inventory.find( { item: "hello" } )
 ```
