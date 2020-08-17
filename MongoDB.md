@@ -33,3 +33,16 @@ db.COLLECTION_NAME.drop()
 ```
 db["COLLECTION.NAME"].drop()
 ```
+
+## [Documents]
+
+### Select documents with existing field 'item'
+```
+db.inventory.find( { item: { $exists: true } } )
+
+
+### Select documents with non-existing field 'item'
+```
+db.inventory.find( { item: { $exists: false } } )
+
+```
