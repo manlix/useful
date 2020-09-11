@@ -1,7 +1,8 @@
 * CryptoPro "directory" path with copied containers from RuToken in Ubuntu
-
-  * This approach works in Firefox with nalog.ru for individual **but not for individual entrepreneur**
-  * Does NOT work with gosuslugi.ru
+  * Works:
+    * in Firefox with [nalog.ru](https://lkfl2.nalog.ru/lkfl/login) (for individual only NOT for individual enterpreneur)
+    * in Chrome with [nalog.ru](https://lkfl2.nalog.ru/lkfl/login) (for individual only NOT for individual enterpreneur)
+    * Does NOT work with [gosuslugi.ru](https://gosuslugi.ru)
 
 ```
 /var/opt/cprocsp/keys/${USER}
