@@ -9,6 +9,9 @@
 ```
 
 * CryptoPro service to check CryptoPro browser plugin to create digital signature
+  * Works
+    * in Firefox
+    * in Chrome
 
 ```
 https://www.cryptopro.ru/sites/default/files/products/cades/demopage/cades_bes_sample.html
