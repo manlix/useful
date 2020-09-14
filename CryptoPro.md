@@ -8,6 +8,10 @@
 /var/opt/cprocsp/keys/${USER}
 ```
 
+* Install CryptoPro browser plugin
+
+  * Go to https://cryptopro.ru/products/cades/plugin/get_2_0 and install **all** `*.deb` packages from it
+
 * CryptoPro service to check CryptoPro browser plugin to create digital signature
   * Works
     * in Firefox
