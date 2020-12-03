@@ -10,13 +10,11 @@
 
 * Install CryptoPro browser plugin
 
-  * Go to https://cryptopro.ru/products/cades/plugin/get_2_0 and install **all** `*.deb` packages from it
+  * Visit https://cryptopro.ru/products/cades/plugin/get_2_0 and install **all** `*.deb` packages from it
 
 * CryptoPro service to check CryptoPro browser plugin to create digital signature
   * Works
     * in Firefox
     * in Chrome
 
-```
-https://www.cryptopro.ru/sites/default/files/products/cades/demopage/cades_bes_sample.html
-```
+Test browser plugin: https://www.cryptopro.ru/sites/default/files/products/cades/demopage/cades_bes_sample.html
