@@ -18,3 +18,5 @@
     * in Chrome
 
 Test browser plugin: https://www.cryptopro.ru/sites/default/files/products/cades/demopage/cades_bes_sample.html
+
+Official browser plugin page: https://www.cryptopro.ru/products/cades/plugin
