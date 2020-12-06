@@ -1,6 +1,6 @@
-## Which debian package belongs utility **X** (for example: **whois**)
+## Which debian package belongs utility **X**
 
-Try to look up **package_name** for installed utility **whois**
+For example: installed package — **whois**
 ```
 manlix@lab:~$ dpkg -S whois
 whois: /usr/share/man/man1/whois.1.gz
@@ -17,8 +17,9 @@ whois: /usr/share/doc/whois
 
 Based on info below: **whois** is a part of package **whois** =)
 
+## List all files belong to debian package
 
-## List all files belong to debian package (for example: package — apache2-utils)
+For example: package — **apache2-utils**
 
 ```
 manlix@lab:~$ dpkg -L apache2-utils
@@ -33,7 +34,9 @@ manlix@lab:~$ dpkg -L apache2-utils
 ```
 
 
-## List files from package.deb (for example: package — cprocsp-rdr-pcsc-64_4.0.9963-5_amd64.deb)
+## List files from package.deb
+
+For example: package file — **cprocsp-rdr-pcsc-64_4.0.9963-5_amd64.deb**
 
 ```
 manlix@lab:~$ dpkg -c ./cprocsp-rdr-pcsc-64_4.0.9963-5_amd64.deb
