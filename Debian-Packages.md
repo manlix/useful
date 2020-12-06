@@ -16,3 +16,18 @@ whois: /usr/share/doc/whois
 ```
 
 Based on info below: **whois** is a part of package **whois** =)
+
+
+## List all files belong to debian package (for example: package — apache2-utils)
+
+```
+manlix@lab:~$ dpkg -L apache2-utils
+/.
+/usr
+/usr/bin
+/usr/bin/ab
+...
+/usr/share/man/man8/htcacheclean.8.gz
+/usr/share/man/man8/rotatelogs.8.gz
+/usr/share/man/man8/split-logfile.8.gz
+```
