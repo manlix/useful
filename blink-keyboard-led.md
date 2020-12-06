@@ -1,4 +1,4 @@
-# Blink keyboard LED
+# Blink keyboard LED from console (bash)
 
 ### Update APT cache
 ```
