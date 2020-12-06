@@ -15,20 +15,14 @@ Where `REPO_PREFIX` — APT repository file
 manlix@lab:~$ awk '/^Package/ {print $2}' /var/lib/apt/lists/REPO_PREFIX*Packages | sort -u
 ```
 
-List all packages from :
+List all packages from repository:
 ```
 manlix@lab:~$ sudo apt update
 manlix@lab:~$ awk '/^Package/ {print $2}' /var/lib/apt/lists/ppa.launchpad.net_ondrej_php_ubuntu_dists_eoan_*Packages | sort -u
 dh-php
 icu-devtools
 icu-doc
-idn2
 ...
-php-yac
-php-yaml
-php-zip
-php-zmq
-python3-libxml2
 python3-libxml2-dbg
 python-libxml2
 python-libxml2-dbg
