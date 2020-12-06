@@ -1,5 +1,11 @@
 # Solutions for Python related issues on Ubuntu
 
+**JFYI**: before apply a solution: update APT cache
+```
+# Update APT cache
+manlix@lab:~$ sudo apt update
+```
+
 ## Problem: cannot create virtualenv
 
 ```
@@ -81,12 +87,8 @@ manlix@lab:~$ sudo apt install -y libpython3.8-dev
 ## Problem: 'fatal error: Python.h: No such file or directory'
 
 
-### Solution: install Python headers files
+### Solution: install Python headers files: install package 'python3-dev'
 
 ```
-# Update APT cache
-manlix@lab:~$ sudo apt update
-
-# Solution: install package 'python3-dev'
 manlix@lab:~$ sudo apt install python3-dev
 ```
