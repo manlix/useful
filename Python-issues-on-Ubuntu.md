@@ -1,6 +1,6 @@
 # Solutions for Python related issues on Ubuntu
 
-**Problem**: cannot create virtualenv
+## Problem: cannot create virtualenv
 
 ```
 manlix@lab:~/venv$ python3 -m venv ./test
@@ -16,13 +16,13 @@ package, recreate your virtual environment.
 Failing command: ['/home/manlix/venv/test/bin/python3', '-Im', 'ensurepip', '--upgrade', '--default-pip']
 ```
 
-**Solution**: install package **python3-venv** providing module **venv**
+### Solution: install package **python3-venv** providing module **venv**
 
 ```
 manlix@lab:~/venv$ sudo apt install -y python3-venv
 ```
 
-**Problem**: cannot run setup.py
+## Problem: cannot run setup.py
 
 ```
 manlix@lab:~/git/project$ python3 setup.py 
@@ -32,13 +32,13 @@ Traceback (most recent call last):
 ModuleNotFoundError: No module named 'setuptools'
 ```
 
-**Solution**: install package **python3-setuptools**
+### Solution: install package python3-setuptools
 
 ```
 manlix@lab:~$ sudo apt install python3-setuptool
 ```
 
-**Problem**: cannot install uWSGI via `python3 -m pip install uWSGI`
+## Problem: cannot install uWSGI via: python3 -m pip install uWSGI
 
 ```
     Traceback (most recent call last):
@@ -60,20 +60,33 @@ manlix@lab:~$ sudo apt install python3-setuptool
     Exception: you need a C compiler to build uWSG
 ```
 
-**Solution**: install C compiler
+### Solution: install C compiler
 
 ```
 manlix@lab:~$ sudo apt install -y gcc
 ```
 
-**Problem**: cannot install python package
+## Problem: cannot install python package
 
 ```
 fatal error: Python.h: No such file or directory
 ```
 
-**Solution**: install development files
+### Solution : install development files
 
 ```
 manlix@lab:~$ sudo apt install -y libpython3.8-dev
+```
+
+## Problem: 'fatal error: Python.h: No such file or directory'
+
+
+### Solution: install Python headers files
+
+```
+# Update APT cache
+manlix@lab:~$ sudo apt update
+
+# Solution: install package 'python3-dev'
+manlix@lab:~$ sudo apt install python3-dev
 ```
