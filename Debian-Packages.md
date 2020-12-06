@@ -31,3 +31,17 @@ manlix@lab:~$ dpkg -L apache2-utils
 /usr/share/man/man8/rotatelogs.8.gz
 /usr/share/man/man8/split-logfile.8.gz
 ```
+
+
+## List files from package.deb (for example: package — cprocsp-rdr-pcsc-64_4.0.9963-5_amd64.deb)
+
+```
+manlix@lab:~$ dpkg -c ./cprocsp-rdr-pcsc-64_4.0.9963-5_amd64.deb
+drwxr-xr-x root/root         0 2018-11-23 00:00 ./
+drwxr-xr-x root/root         0 2018-11-23 00:00 ./opt/
+drwxr-xr-x root/root         0 2018-11-23 00:00 ./opt/cprocsp/
+...
+lrwxrwxrwx root/root         0 2018-11-23 00:00 ./opt/cprocsp/lib/amd64/librdrpcsc.so.4 -> librdrpcsc.so.4.0.4
+lrwxrwxrwx root/root         0 2018-11-23 00:00 ./opt/cprocsp/lib/amd64/librdrric.so.4 -> librdrric.so.4.0.4
+lrwxrwxrwx root/root         0 2018-11-23 00:00 ./opt/cprocsp/lib/amd64/librdrpcsc.so -> librdrpcsc.so.4.0.4
+```
