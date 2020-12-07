@@ -1,5 +1,7 @@
-# Change playback rate in browser console to 2x
+# JavaScript in browser
+
+## Change video playback rate to 2x for player with id="video1":
 
 ```
-document.getElementById("video1").playbackRate=2.0;
+document.querySelector("#video1").playbackRate=2.0;
 ```
