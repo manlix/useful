@@ -1,14 +1,14 @@
 # Solutions for Python related issues on Ubuntu
 
 **JFYI**: before apply a solution: update APT cache
-```
+```bash
 # Update APT cache
 manlix@lab:~$ sudo apt update
 ```
 
 ## Problem: cannot create virtualenv
 
-```
+```bash
 manlix@lab:~/venv$ python3 -m venv ./test
 The virtual environment was not created successfully because ensurepip is not
 available.  On Debian/Ubuntu systems, you need to install the python3-venv
@@ -24,13 +24,13 @@ Failing command: ['/home/manlix/venv/test/bin/python3', '-Im', 'ensurepip', '--u
 
 ### Solution: install package **python3-venv** providing module **venv**
 
-```
+```bash
 manlix@lab:~/venv$ sudo apt install -y python3-venv
 ```
 
 ## Problem: cannot run setup.py
 
-```
+```bash
 manlix@lab:~/git/project$ python3 setup.py 
 Traceback (most recent call last):
   File "setup.py", line 3, in <module>
@@ -40,13 +40,13 @@ ModuleNotFoundError: No module named 'setuptools'
 
 ### Solution: install package python3-setuptools
 
-```
+```bash
 manlix@lab:~$ sudo apt install python3-setuptool
 ```
 
 ## Problem: cannot install uWSGI via: python3 -m pip install uWSGI
 
-```
+```python
     Traceback (most recent call last):
       File "<string>", line 1, in <module>
       File "/tmp/pip-install-sg47zmid/uWSGI/setup.py", line 117, in <module>
@@ -68,7 +68,7 @@ manlix@lab:~$ sudo apt install python3-setuptool
 
 ### Solution: install C compiler
 
-```
+```bash
 manlix@lab:~$ sudo apt install -y gcc
 ```
 
@@ -80,7 +80,7 @@ fatal error: Python.h: No such file or directory
 
 ### Solution : install development files
 
-```
+```bash
 manlix@lab:~$ sudo apt install -y libpython3.8-dev
 ```
 
@@ -89,6 +89,6 @@ manlix@lab:~$ sudo apt install -y libpython3.8-dev
 
 ### Solution: install Python headers files: install package 'python3-dev'
 
-```
+```bash
 manlix@lab:~$ sudo apt install python3-dev
 ```
