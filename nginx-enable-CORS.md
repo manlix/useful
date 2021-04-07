@@ -1,4 +1,7 @@
 ```
+
+# ATTENTION: it's a wrapper over the application. Right way is to set up CORS on application side.
+
 # Enable granularity CORS in nginx
 
 server {
