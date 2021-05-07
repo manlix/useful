@@ -4,6 +4,12 @@ Original sources about Application and Request contexts in Flask are:
 * https://testdriven.io/blog/flask-contexts/
 * https://testdriven.io/blog/flask-contexts-advanced/
 
+## Types of contexts
+
+* Application Context (`current_app`, `g`)
+* Request Context (`request`, `session`)
+
+
 ## Bind to Application context
 
 ### Without a context manager
