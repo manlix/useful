@@ -1,8 +1,38 @@
 # GIT
 
+## Show detail config settings
+
+* Like:
+  * `user.name`
+  * `user.email`
+  * `core.editor`
+
+```console
+manlix@lab:~/git/b7$ git config --list --show-origin
+...
+file:/home/manlix/.gitconfig    user.email=username@example.com
+file:/home/manlix/.gitconfig    user.name=User Name
+file:/home/manlix/.gitconfig    core.editor=vim
+...
+```
+
+## Set up config about name & email in current Git repository
+
+```console
+manlix@lab:~/git/b7$ git config user.name "User Name"
+manlix@lab:~/git/b7$ git config user.email username@example.com
+```
+
+## Set up config about name & email (GLOBALLY)
+
+```console
+manlix@lab:~/git/b7$ git config --global user.name "User Name"
+manlix@lab:~/git/b7$ git config --global user.email username@example.com
+```
+
 
 ## Create TAR.GZ archvie from Git repository
-```shell
+```console
 # Create archive
 manlix@lab:~/PhpstormProjects/untitled3$ git archive -o archive.tar.gz HEAD
 
