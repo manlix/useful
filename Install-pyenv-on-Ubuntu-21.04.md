@@ -32,6 +32,12 @@ Add this line to the end:
 eval "$(pyenv init -)"
 ```
 
+## Apply changes
+
+```bash
+manlix@lab:~$ exec $SHELL
+```
+
 ## Check pyenv
 
 ```bash
