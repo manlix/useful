@@ -20,15 +20,16 @@ manlix@lab:~$ curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/py
 ## Edit ~/.profile
 Add these lines above all lines:
 ```bash
- export PYENV_ROOT="$HOME/.pyenv"                                                
- export PATH="$PYENV_ROOT/bin:$PATH"                                             
- eval "$(pyenv init --path)"
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
 ```
 
 ## Edit ~/.bashrc
 Add this line to the end:
+
 ```bash
-eval "$(pyenv virtualenv-init -)"
+eval "$(pyenv init -)"
 ```
 
 ## Check pyenv
