@@ -1,4 +1,4 @@
-# Install Node.js 14 on Ubuntu 20.04
+# Install Node.js 14 (LTS) on Ubuntu 20.04, 21.04
 
 ## Useful links about Node.js
 
@@ -11,8 +11,8 @@
 
 ```bash
 manlix@lab:~$ sudo snap install node --channel=14/stable --classic
-node (14/stable) 14.0.0 from NodeSource, Inc. (nodesource✓) installed
+node (14/stable) 14.17.5 from NodeSource, Inc. (nodesource✓) installed
 
 manlix@lab:~$ node --version
-v14.0.0
+v14.17.5
 ```
