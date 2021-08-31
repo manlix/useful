@@ -47,3 +47,10 @@ phpunit.xml.dist
 src/
 src/HelloWorld.php
 ```
+
+## Push an existing repository from the CLI
+```console
+$ git remote add origin git@github.com:LOGIN/PROJECT.git
+$ git branch -M main
+$ git push -u origin main
+```
