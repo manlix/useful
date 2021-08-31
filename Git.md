@@ -1,4 +1,4 @@
-# GIT
+# Git
 
 ## Show detail config settings
 
