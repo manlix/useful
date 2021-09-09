@@ -50,3 +50,9 @@ shellcheck v0.7.2+git1.aaa3554 from Vidar (koalaman) installed
 ```console
 manlix@lab:~$ snap list 
 ```
+
+## List outdated snaps
+```console
+manlix@lab:~$ snap refresh --list
+All snaps up to date.
+```
