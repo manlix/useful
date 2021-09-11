@@ -54,5 +54,13 @@ manlix@lab:~$ snap list
 ## List outdated snaps
 ```console
 manlix@lab:~$ snap refresh --list
-All snaps up to date.
+Name  Version  Rev   Publisher  Notes
+node  16.9.1   5358  iojs✓      classic
+```
+
+## Update outdated snaps
+
+```console
+manlix@lab:~$ sudo snap refresh
+node (16/stable) 16.9.1 from OpenJS Foundation (iojs✓) refreshed
 ```
