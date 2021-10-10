@@ -21,6 +21,8 @@ def test_hello():
 Create `conftest.py` file in tests root directory with following data:
 
 ```python3
+from pytest import ExitCode
+
 def do_something():
   print("All tests have been completed succesfully")
 
