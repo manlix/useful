@@ -35,14 +35,14 @@ eval "$(pyenv init -)"
 ## Apply changes
 
 ```bash
-manlix@lab:~$ exec $SHELL
+manlix@lab:~$ . ~/.bashrc
 ```
 
 ## Check pyenv
 
 ```bash
 manlix@lab:~$ pyenv --version
-pyenv 2.0.1
+pyenv 2.2.0
 ```
 ---
 
