@@ -1,4 +1,4 @@
-# Install pyenv on Ubuntu 21.04
+# Install pyenv on Ubuntu 21.10
 
 
 ## Install dependencies
