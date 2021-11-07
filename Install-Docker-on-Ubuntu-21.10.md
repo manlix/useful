@@ -1,13 +1,13 @@
-# Install Docker on Ubuntu 20.04 LTS (Focal Fossa)
+# Install Docker on Ubuntu 21.10
 
-## Check that you use `Ubuntu 20.04 LTS (Focal Fossa)`
+## Check that you use `Ubuntu 21.10`
 ```
 manlix@lab:~$ lsb_release -a
 No LSB modules are available.
 Distributor ID:	Ubuntu
-Description:	Ubuntu 20.04 LTS
-Release:	20.04
-Codename:	focal
+Description:	Ubuntu 21.10
+Release:	21.10
+Codename:	impish
 ```
 
 ## Update APT cache
@@ -16,10 +16,31 @@ Codename:	focal
 manlix@lab:~$ sudo apt update
 ```
 
+## Install dependencies
+
+```
+manlix@lab:~$ sudo apt install ca-certificates curl gnupg lsb-release
+```
+
+## Add Docker GPG key
+
+```
+manlix@lab:~$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+```
+
+## Add Docker repo
+
+```
+manlix@lab:~$ echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+```
+
 ## Install Docker
 
 ```
-manlix@lab:~$ sudo apt install -y docker.io
+ manlix@lab:~$ sudo apt update
+ manlix@lab:~$ sudo apt install -y docker-ce docker-ce-cli containerd.io
 
 ```
 
@@ -27,12 +48,19 @@ manlix@lab:~$ sudo apt install -y docker.io
 
 ```
 manlix@lab:~$ docker --version
-Docker version 19.03.8, build afacb8b7f0
+Docker version 20.10.10, build b485636
+```
+
+## Check Docker works properly
+
+```
+manlix@lab:~$ sudo docker run hello-world
 ```
 
 ## Allow to run Docker under non-root account
 
-Problem — non-root account is not allowing to use Docker:
+Issue — non-root account is not allowing to run Docker:
+
 ```
 manlix@lab:~$ docker ps
 Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get http://%2Fvar%2Frun%2Fdocker.sock/v1.40/containers/json: dial unix /var/run/docker.sock: connect: permission denie
@@ -62,7 +90,7 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 ```
 
 
-## Check Docker works fine — run first container `hello-world`:
+### Check Docker works fine — run first container `hello-world`:
 
 ```
 manlix@lab:~$ docker run hello-world
@@ -93,3 +121,5 @@ Share images, automate workflows, and more with a free Docker ID:
 For more examples and ideas, visit:
  https://docs.docker.com/get-started/
  ```
+ 
+ Originally from official docs: https://docs.docker.com/engine/install/ubuntu/
