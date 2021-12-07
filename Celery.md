@@ -1,4 +1,14 @@
-## Current chain state:
+### Celery
+
+### Run task with specific id
+
+```python3
+task.apply_async(task_id="my-custom-task-id")
+```
+
+
+## Chain
+### Current chain state:
 ```python3
 def chain_current_state(chain_id):
     for task_id in chain_id.as_list():
@@ -6,7 +16,7 @@ def chain_current_state(chain_id):
             return AsyncResult(task_id).state
 ```
 
-## Current chain result:
+### Current chain result:
 ```python3
 def chain_current_state(chain_id):
     for task_id in chain_id.as_list():
@@ -14,7 +24,7 @@ def chain_current_state(chain_id):
             return AsyncResult(task_id).info
 ```
 
-## Chaining several tasks:
+### Chaining several tasks:
 
 ```python3
 from celery import chain
