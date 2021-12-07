@@ -10,17 +10,23 @@ task.apply_async(task_id="my-custom-task-id")
 ## Chain
 ### Current chain state:
 ```python3
+from celery import states
+from celery.result import AsyncResult
+
 def chain_current_state(chain_id):
     for task_id in chain_id.as_list():
-        if AsyncResult(task_id).state != "PENDING":
+        if AsyncResult(task_id).state != states.PENDING:
             return AsyncResult(task_id).state
 ```
 
 ### Current chain result:
 ```python3
+from celery import states
+from celery.result import AsyncResult
+
 def chain_current_state(chain_id):
     for task_id in chain_id.as_list():
-        if AsyncResult(task_id).state != "PENDING":
+        if AsyncResult(task_id).state != states.PENDING:
             return AsyncResult(task_id).info
 ```
 
