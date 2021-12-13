@@ -24,7 +24,7 @@ def chain_current_state(chain_id):
 from celery import states
 from celery.result import AsyncResult
 
-def chain_current_state(chain_id):
+def chain_current_result(chain_id):
     for task_id in chain_id.as_list():
         if AsyncResult(task_id).state != states.PENDING:
             return AsyncResult(task_id).info
