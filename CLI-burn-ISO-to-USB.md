@@ -1,7 +1,7 @@
 # Burn ISO to USB drive in Ubuntu
 
 ```shell
-$ sudo dd if=/path/to/image.iso of=/path/to/USB_DRIVE conv=fdatasync status=progress
+$ sudo dd if=/path/to/image.iso of=/path/to/USB_DRIVE bs=4M conv=fdatasync status=progress
 ```
 
 In my case `/path/to/USB_DRIVE` is `/dev/sdb`:
